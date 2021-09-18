@@ -1,0 +1,54 @@
+<!-- 头部自定义标题 -->
+<cu-custom bgColor="bg-gradual-orange" isCustom="{{false}}">
+  <view slot="content">关于作者</view>
+</cu-custom>
+<!-- 正文 -->
+
+<scroll-view scroll-y class="scrollPage">
+  <view class="UCenter-bg">
+  </view>
+
+  <view class="bg-white solid-bottom" >
+    <view class="text-left padding">刘宇（花名：江昱），
+      国防科大在读博士，阿里云函数计算、Serverless工作流产品体验侧负责人。阿里云战略级开源项目Serverless Devs发起人， 社区项目Anycodes在线编程负责人。
+      阿里云Serverless云布道师，CIO学院特聘讲师。畅销书《Serverless架构：从原理、设计到项目实战》《Serverless工程实践：从入门到进阶》等书作者，电子书《架构师特刊：人人都能学会的 Serverless
+      实践》（InfoQ出品）作者。</view>
+  </view>
+  <view class="cu-bar bg-white solid-bottom" bindtap="toBro" data-content="https://bluo.cn">
+  <view class='action'>
+    <text class='cuIcon-similar text-orange '></text> 博客：https://bluo.cn
+  </view>
+</view>
+<view class="cu-bar bg-white solid-bottom" bindtap="toBro" data-content="zhihuiyushuaiqi">
+  <view class='action'>
+    <text class='cuIcon-weixin text-orange '></text> 微信：zhihuiyushuaiqi
+  </view>
+</view>
+<view class="cu-bar bg-white solid-bottom" bindtap="toBro" data-content="goserverless">
+  <view class='action'>
+    <text class='cuIcon-edit text-orange '></text> 公众号: go-serverless
+  </view>
+</view>
+<view class="cu-bar bg-white solid-bottom" bindtap="toBro" data-content="https://github.com/anycodes">
+  <view class='action'>
+    <text class='cuIcon-github text-orange '></text> Github: https://github.com/anycodes
+  </view>
+</view>
+</scroll-view>
+<text>\n\n</text>
+<!-- 头部自定义Nav -->
+<view class="cu-bar tabbar bg-white shadow foot">
+  <view class="action {{cur_nav == 'index' ? 'text-orange' : ''}}" bindtap="NavChange" data-cur="index">
+    <view class="cuIcon-home"></view> 博客首页
+  </view>
+  <view class="action {{cur_nav == 'category' ? 'text-orange' : ''}}" bindtap="NavChange" data-cur="category">
+    <view class="cuIcon-tag"></view> 分类标签
+  </view>
+  <view class="action {{cur_nav == 'representative' ? 'text-orange' : ''}}" bindtap="NavChange"
+    data-cur="representative">
+    <view class="cuIcon-edit"></view> 代表作品
+  </view>
+  <view class="action {{cur_nav == 'about' ? 'text-orange' : ''}}" bindtap="NavChange" data-cur="about">
+    <view class="cuIcon-people"></view> 关于博主
+  </view>
+</view>

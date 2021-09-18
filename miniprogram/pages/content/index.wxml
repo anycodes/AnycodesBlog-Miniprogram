@@ -1,0 +1,52 @@
+<!-- 头部自定义标题 -->
+<cu-custom bgColor="bg-gradual-orange" isCustom="{{true}}">
+  <view slot="content">文章正文</view>
+</cu-custom>
+<!-- 正文 -->
+<view class="cu-bar bg-white solid-bottom margin-top">
+  <view class="action">
+    <rich-text nodes="{{blog.title}}" class="content_title"></rich-text>
+  </view>
+</view>
+<view class="padding bg-white solid-bottom">
+  <view class="text-left"><text class="cuIcon-time text-orange"></text> {{blog.time}}</view>
+  <view class="text-left"><text class="cuIcon-sort text-orange"></text> {{blog.category}}</view>
+  <view class="text-left"><text class="cuIcon-tag text-orange"></text> {{blog.tags}}</view>
+</view>
+<view class="padding bg-white margin-bottom">
+  <!-- <import src="../../wxParse/wxParse.wxml"/>
+  <template is="wxParse" data="{{wxParseData:article.nodes}}"/>  -->
+  <wemark md="{{blog.md_content}}" link highlight type="wemark"></wemark>
+
+  <!-- <rich-text nodes="{{blog.content}}"></rich-text> -->
+</view>
+<view wx:if="{{blog.pre.title}}">
+  <view class="cu-bar bg-white solid-top solid-bottom" data-url="{{blog.pre.url}}" bindtap="toContent">
+    <view class="action">
+      <text class="cuIcon-pullleft text-orange"></text>{{blog.pre.title}}
+    </view>
+  </view>
+</view>
+<view wx:if="{{blog.next.title}}">
+<view class="cu-bar bg-white solid-top solid-bottom" data-url="{{blog.next.url}}" bindtap="toContent">
+  <view class="action">
+    <text class="cuIcon-pullright text-orange"></text>{{blog.next.title}}
+  </view>
+</view>
+</view>
+<text>\n\n\n\n\n\n</text>
+<!-- 头部自定义Nav -->
+<view class="cu-bar tabbar bg-white shadow foot">
+  <view class="action {{cur_nav == 'index' ? 'text-orange' : ''}}" bindtap="NavChange" data-cur="index">
+    <view class="cuIcon-home"></view> 博客首页
+  </view>
+  <view class="action {{cur_nav == 'category' ? 'text-orange' : ''}}" bindtap="NavChange" data-cur="category">
+    <view class="cuIcon-tag"></view> 分类标签
+  </view>
+  <view class="action {{cur_nav == 'representative' ? 'text-orange' : ''}}" bindtap="NavChange" data-cur="representative">
+    <view class="cuIcon-edit"></view> 代表作品
+  </view>
+  <view class="action {{cur_nav == 'about' ? 'text-orange' : ''}}" bindtap="NavChange" data-cur="about">
+    <view class="cuIcon-people"></view> 关于博主
+  </view>
+</view>

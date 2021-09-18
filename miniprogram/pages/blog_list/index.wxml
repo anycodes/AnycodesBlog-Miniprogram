@@ -1,0 +1,38 @@
+<!-- 头部自定义标题 -->
+<cu-custom bgColor="bg-gradual-orange" isCustom="{{true}}">
+  <view slot="content">{{title}}</view>
+</cu-custom>
+<!-- 正文 -->
+<view class="cu-card article no-card solids-bottom" wx:for="{{blog_list}}" wx:key="item">
+  <view class="cu-item shadow" data-url="{{item.url}}" bindtap="toContent">
+    <view class="title">
+      <view class="text-cut">{{item.title}}</view>
+    </view>
+    <view class="content">
+      <image src="{{item.picture}}" mode="aspectFill"></image>
+      <view class="desc">
+        <view class="text-content">{{item.description}}</view>
+        <view>
+          <view class="cu-tag bg-red light sm round">{{item.category}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<text>\n\n\n\n\n\n</text>
+<!-- 头部自定义Nav -->
+<view class="cu-bar tabbar bg-white shadow foot">
+  <view class="action {{cur_nav == 'index' ? 'text-orange' : ''}}" bindtap="NavChange" data-cur="index">
+    <view class="cuIcon-home"></view> 博客首页
+  </view>
+  <view class="action {{cur_nav == 'category' ? 'text-orange' : ''}}" bindtap="NavChange" data-cur="category">
+    <view class="cuIcon-tag"></view> 分类标签
+  </view>
+  <view class="action {{cur_nav == 'representative' ? 'text-orange' : ''}}" bindtap="NavChange" data-cur="representative">
+    <view class="cuIcon-edit"></view> 代表作品
+  </view>
+  <view class="action {{cur_nav == 'about' ? 'text-orange' : ''}}" bindtap="NavChange" data-cur="about">
+    <view class="cuIcon-people"></view> 关于博主
+  </view>
+</view>

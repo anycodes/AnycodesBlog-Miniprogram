@@ -1,0 +1,41 @@
+<!-- 头部自定义标题 -->
+<cu-custom bgColor="bg-gradual-orange" isCustom="{{false}}">
+  <view slot="content">分类与标签</view>
+</cu-custom>
+<!-- 正文 -->
+
+<!-- <scroll-view scroll-x class="bg-white nav text-center">
+  <view class="cu-item {{index==TabCur?'text-blue cur':''}}" wx:for="{{nav_list}}" wx:key bindtap="tabSelect" data-id="{{index}}">
+    {{nav_list[index].name}}
+  </view>
+</scroll-view> -->
+
+<view class="cu-bar bg-white solid-bottom">
+  <view class='action'>
+    <text class='cuIcon-titles text-orange '></text> 标签列表
+  </view>
+</view>
+
+  <view class="padding-sm flex flex-wrap">
+  <view class="padding-xs" wx:for="{{tags}}" wx:key  wx:if="{{item.name!='gray'}}">
+    <view class="cu-tag bg-{{item.color.name}}" bindtap="toList" data-title="{{item.title}}" data-type="tags">{{item.title}}</view>
+  </view>
+</view>
+<text>\n\n\n\n\n</text>
+
+<!-- 头部自定义Nav -->
+<view class="cu-bar tabbar bg-white shadow foot">
+  <view class="action {{cur_nav == 'index' ? 'text-orange' : ''}}" bindtap="NavChange" data-cur="index">
+    <view class="cuIcon-home"></view> 博客首页
+  </view>
+  <view class="action {{cur_nav == 'category' ? 'text-orange' : ''}}" bindtap="NavChange" data-cur="category">
+    <view class="cuIcon-tag"></view> 分类标签
+  </view>
+  <view class="action {{cur_nav == 'representative' ? 'text-orange' : ''}}" bindtap="NavChange"
+    data-cur="representative">
+    <view class="cuIcon-edit"></view> 代表作品
+  </view>
+  <view class="action {{cur_nav == 'about' ? 'text-orange' : ''}}" bindtap="NavChange" data-cur="about">
+    <view class="cuIcon-people"></view> 关于博主
+  </view>
+</view>

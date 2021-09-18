@@ -1,0 +1,4 @@
+/* pages/content/index.wxss */
+.content_title {
+  word-break:break-all;
+}

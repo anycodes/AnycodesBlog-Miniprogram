@@ -1,0 +1,3 @@
+- 后端：Python Flask框架，部署到阿里云函数计算上（通过工具Servverless Devs）
+- 前端：小程序，使用colorUI组件库以及wemark组件共同完成
+- 效果：参考程序`Anycodes刘宇的博客`

@@ -1,0 +1,401 @@
+<!-- 头部自定义标题 -->
+<cu-custom bgColor="bg-gradual-orange" isCustom="{{false}}">
+  <view slot="content">代表作品</view>
+</cu-custom>
+<!-- 正文 -->
+
+<scroll-view scroll-x class="bg-white nav text-center">
+  <view class="cu-item {{index==TabCur?'text-blue cur':''}}" wx:for="{{nav_list}}" wx:key bindtap="tabSelect"
+    data-id="{{index}}">
+    {{nav_list[index].name}}
+  </view>
+</scroll-view>
+
+<view hidden="{{TabCur==3 ? false : true}}">
+  <view class="cu-card dynamic">
+    <view class="cu-item shadow">
+      <view class="cu-list menu-avatar">
+        <view class="cu-item">
+          <view class="cu-avatar lg"
+            style="background-image:url(https://i1.hdslb.com/bfs/archive/57b06130f67add6a36cef94740f07f84e17a891b.jpg@380w_240h_100Q_1c.webp);">
+          </view>
+          <view class="content flex-sub">
+            <view>零基础学习Python爬虫</view>
+            <view class="text-gray text-sm flex justify-between">
+              零基础学习Python与网络爬虫技术
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="grid col-5 padding-sm">
+            <button class="cu-btn round bg-gradual-orange" bindtap="toBro"
+              data-url="https://space.bilibili.com/35850273/channel/seriesdetail?sid=231543">点击复制链接</button>
+          </view>
+    </view>
+  </view>
+  <view class="cu-card dynamic">
+    <view class="cu-item shadow">
+      <view class="cu-list menu-avatar">
+        <view class="cu-item">
+          <view class="cu-avatar lg"
+            style="background-image:url(https://i1.hdslb.com/bfs/archive/f5a7b5b0522e9d8614f9b213dd8fa9854422adb4.jpg@380w_240h_100Q_1c.webp);">
+          </view>
+          <view class="content flex-sub">
+            <view>Python爬虫实战</view>
+            <view class="text-gray text-sm flex justify-between">
+              从实战开始，进行Python网络爬虫学习
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="grid col-5 padding-sm">
+            <button class="cu-btn round bg-gradual-orange" bindtap="toBro"
+              data-url="https://space.bilibili.com/35850273/channel/seriesdetail?sid=231542">点击复制链接</button>
+          </view>
+    </view>
+  </view>
+  <view class="cu-card dynamic">
+    <view class="cu-item shadow">
+      <view class="cu-list menu-avatar">
+        <view class="cu-item">
+          <view class="cu-avatar lg"
+            style="background-image:url(https://i0.hdslb.com/bfs/archive/44fe544a890ff1c1dcfc0b6fc195db6a3a0b07e1.jpg@380w_240h_100Q_1c.webp);">
+          </view>
+          <view class="content flex-sub">
+            <view>零基础用Django写博客</view>
+            <view class="text-gray text-sm flex justify-between">
+              从零开始学习Python Web框架：Django
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="grid col-5 padding-sm">
+            <button class="cu-btn round bg-gradual-orange" bindtap="toBro"
+              data-url="https://space.bilibili.com/35850273/channel/seriesdetail?sid=231541">点击复制链接</button>
+          </view>
+    </view>
+  </view>
+  <view class="cu-card dynamic">
+    <view class="cu-item shadow">
+      <view class="cu-list menu-avatar">
+        <view class="cu-item">
+          <view class="cu-avatar lg"
+            style="background-image:url(https://i2.hdslb.com/bfs/archive/435da8f58280fd6b16f168ba07e29cc60593c38e.jpg@380w_240h_100Q_1c.webp);">
+          </view>
+          <view class="content flex-sub">
+            <view>Python爬虫补发视频</view>
+            <view class="text-gray text-sm flex justify-between">
+              Python爬虫的高阶课程：爬虫也许并不简单
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="grid col-5 padding-sm">
+            <button class="cu-btn round bg-gradual-orange" bindtap="toBro"
+              data-url="https://space.bilibili.com/35850273/channel/seriesdetail?sid=231538">点击复制链接</button>
+          </view>
+    </view>
+  </view>
+  <view class="cu-card dynamic">
+    <view class="cu-item shadow">
+      <view class="cu-list menu-avatar">
+        <view class="cu-item">
+          <view class="cu-avatar lg"
+            style="background-image:url(https://i0.hdslb.com/bfs/archive/1e2da96ed673df7b58fd8e8213708f713f0a7a27.jpg@380w_240h_100Q_1c.webp);">
+          </view>
+          <view class="content flex-sub">
+            <view>从云API到构建自己的控制台</view>
+            <view class="text-gray text-sm flex justify-between">
+              从零学习腾讯云云API以及进行思路拓展
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="grid col-5 padding-sm">
+            <button class="cu-btn round bg-gradual-orange" bindtap="toBro"
+              data-url="https://space.bilibili.com/35850273/channel/seriesdetail?sid=231537">点击复制链接</button>
+          </view>
+    </view>
+  </view>
+  <view class="cu-card dynamic">
+    <view class="cu-item shadow">
+      <view class="cu-list menu-avatar">
+        <view class="cu-item">
+          <view class="cu-avatar lg"
+            style="background-image:url(https://i0.hdslb.com/bfs/archive/4d6723c4bb207274f2f5f429651d34fcd5dc8564.jpg@380w_240h_100Q_1c.webp);">
+          </view>
+          <view class="content flex-sub">
+            <view>零基础入门Serverless架构</view>
+            <view class="text-gray text-sm flex justify-between">
+              从零入门Serverless架构，从此就是Serverlessor
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="grid col-5 padding-sm">
+            <button class="cu-btn round bg-gradual-orange" bindtap="toBro"
+              data-url="https://space.bilibili.com/35850273/channel/seriesdetail?sid=231536">点击复制链接</button>
+          </view>
+    </view>
+  </view>
+</view>
+
+<view hidden="{{TabCur==1 ? false : true}}">
+  <view class="cu-card case">
+    <view class="cu-item shadow">
+      <view class="image">
+        <image
+          src="https://serverless-article-picture.oss-cn-hangzhou.aliyuncs.com/1631808682088_20210916161124848261.png"
+          mode="widthFix"></image>
+        <view class="cu-tag bg-blue">开发者工具</view>
+        <view class="cu-bar bg-shadeBottom">
+          <text class="text-cut">Serverless Devs</text>
+        </view>
+      </view>
+      <view class="cu-list menu-avatar">
+        <view class="padding bg-white">
+          <view class="text-left padding">
+            Serverless Devs 是一个组件化与插件化的 Serverless 开发者平台，开发者可以在平台中可插拔式的使用不同 Serverless
+            的服务和框架，同时可参与组件和插件的开发。无论是工业级的 Serverless 服务，还是各类开源的 Serverless 框架 ...... </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="cu-card case">
+    <view class="cu-item shadow">
+      <view class="image">
+        <image
+          src="https://serverless-article-picture.oss-cn-hangzhou.aliyuncs.com/1631808832874_20210916161355622208.png"
+          mode="widthFix"></image>
+        <view class="cu-tag bg-blue">软件</view>
+        <view class="cu-bar bg-shadeBottom">
+          <text class="text-cut">Anycodes在线编程</text>
+        </view>
+      </view>
+      <view class="cu-list menu-avatar">
+        <view class="padding bg-white">
+          <view class="text-left padding">
+
+            Anycodes在线编程是一款可以随时随地进行代码编写和编程学习的工具，手机客户端可以搜索"在线编程"下载体验，微信小程序可以搜索"Anycodes"快速体验。通过Anycodes在线编程，我们可以充分的利用自己的零散时间，进行超过26种语言的随时随地练习与学习
+            ......
+          </view>
+          <view class="grid col-5 padding-sm">
+              <button class="cu-btn round bg-gradual-orange" bindtap="toMiniP"
+                data-mnp="wx453cb539f9f963b2">体验小程序</button>
+            </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="cu-card case">
+    <view class="cu-item shadow">
+      <view class="image">
+        <image
+          src="https://serverless-article-picture.oss-cn-hangzhou.aliyuncs.com/1631808732442_20210916161215632229.png"
+          mode="widthFix"></image>
+        <view class="cu-tag bg-blue">开发者工具</view>
+        <view class="cu-bar bg-shadeBottom">
+          <text class="text-cut">腾讯云 云API Explorer</text>
+        </view>
+      </view>
+      <view class="cu-list menu-avatar">
+        <view class="padding bg-white">
+          <view class="text-left padding">
+            云API Explorer是一款腾讯云的云API3.0开发者工具，可以帮助开发者快速的查找、使用通过云API 3.0暴露出来的接口，通过云API
+            Explorer产品还可以帮助开发者快速签名，快速生成业务代码，快速生成CLI命令等，一切为了开发者，为了开发者的一切 ......
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view hidden="{{TabCur==2 ? false : true}}">
+  <view class="cu-card dynamic">
+    <view class="cu-item shadow">
+      <view class="cu-list menu-avatar">
+        <view class="cu-item">
+          <view class="cu-avatar lg"
+            style="background-image:url(https://serverless-article-picture.oss-cn-hangzhou.aliyuncs.com/1631807044194_20210916154404928556.png);">
+          </view>
+          <view class="content flex-sub">
+            <view>Anycodes在线编程</view>
+            <view class="text-gray text-sm flex justify-between">
+              随时随地有创意，随时随地写程序
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="text-content">
+        Anycodes支持C，C++，Java，Php，C#，Python等在内的26种语言，支持语法高亮、多文件、标准输入、Debug，云端存储等功能。
+      </view>
+      <view class="grid col-5 padding-sm">
+        <button class="cu-btn round bg-gradual-orange" bindtap="toMiniP" data-mnp="wx453cb539f9f963b2">体验小程序</button>
+      </view>
+    </view>
+  </view>
+  <view class="cu-card dynamic">
+    <view class="cu-item shadow">
+      <view class="cu-list menu-avatar">
+        <view class="cu-item">
+          <view class="cu-avatar lg"
+            style="background-image:url(https://serverless-article-picture.oss-cn-hangzhou.aliyuncs.com/1631808122168_20210916160205745012.png);">
+          </view>
+          <view class="content flex-sub">
+            <view>一册时光</view>
+            <view class="text-gray text-sm flex justify-between">
+              从这里开始，记录一切美好
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="text-content">
+        一册时光，用来记录过去的美好。通过新建相册，上传图片，你可以在未来通过文字，搜索到过去的图片，例如：与弟弟在广州塔下拍照
+      </view>
+      <view class="grid col-5 padding-sm">
+        <button class="cu-btn round bg-gradual-orange" bindtap="toMiniP" data-mnp="wxb767db2e242f9c71">体验小程序</button>
+      </view>
+    </view>
+  </view>
+  <view class="cu-card dynamic">
+    <view class="cu-item shadow">
+      <view class="cu-list menu-avatar">
+        <view class="cu-item">
+          <view class="cu-avatar lg"
+            style="background-image:url(https://serverless-article-picture.oss-cn-hangzhou.aliyuncs.com/1631808243459_20210916160404592790.png);">
+          </view>
+          <view class="content flex-sub">
+            <view>程序员题库</view>
+            <view class="text-gray text-sm flex justify-between">
+              刷题，就从这里开始
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="text-content">
+        程序猿题库是一款在线答题小程序，致力于为广大程序员提供一款随时随地面试，测试是的工具。
+      </view>
+      <view class="grid col-5 padding-sm">
+        <button class="cu-btn round bg-gradual-orange" bindtap="toMiniP" data-mnp="wx329f342597fa3b27">体验小程序</button>
+      </view>
+    </view>
+  </view>
+  <view class="cu-card dynamic">
+    <view class="cu-item shadow">
+      <view class="cu-list menu-avatar">
+        <view class="cu-item">
+          <view class="cu-avatar lg"
+            style="background-image:url(https://serverless-article-picture.oss-cn-hangzhou.aliyuncs.com/1631808364765_20210916160605757687.png);">
+          </view>
+          <view class="content flex-sub">
+            <view>Anycodes 博客</view>
+            <view class="text-gray text-sm flex justify-between">
+              记录我的成长，也记录过往
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="text-content">
+        我的个人博客，通过Serverless架构与小程序结合，以另一种形式进行表现。
+      </view>
+      <view class="grid col-5 padding-sm">
+        <button class="cu-btn round bg-gradual-orange">就是当前小程序哦</button>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view hidden="{{TabCur==0 ? false : true}}">
+  <view class="cu-card case">
+    <view class="cu-item shadow">
+      <view class="image">
+        <image
+          src="https://serverless-article-picture.oss-cn-hangzhou.aliyuncs.com/1631805422144_20210916151705091771.png"
+          mode="widthFix"></image>
+        <view class="cu-tag bg-blue">图书</view>
+        <view class="cu-bar bg-shadeBottom">
+          <text class="text-cut">Serverless工程实践：从入门到进阶</text>
+        </view>
+      </view>
+      <view class="cu-list menu-avatar">
+        <view class="padding bg-white">
+          <view class="text-left padding">
+            本书是一本关于Serverless架构从原理、入门到实战的技术书籍，本书通过多个开源项目（包括不限于Knative、OpenWhisk、Kubeless等）、多个云厂商的多款云产品（包括不限于阿里云函数计算、阿里云Serverless工作流、腾讯云云函数、华为云函数工作流......
+          </view>
+          <view class="grid col-5 padding-sm">
+            <button class="cu-btn round bg-gradual-orange" bindtap="toJingdong" data-sid="13366562">跳转京东购买</button>
+          </view>
+        </view>
+
+      </view>
+    </view>
+  </view>
+  <view class="cu-card case">
+    <view class="cu-item shadow">
+      <view class="image">
+        <image
+          src="https://serverless-article-picture.oss-cn-hangzhou.aliyuncs.com/1631805552717_20210916151913909846.png"
+          mode="widthFix"></image>
+        <view class="cu-tag bg-blue">图书</view>
+        <view class="cu-bar bg-shadeBottom">
+          <text class="text-cut">Serverless架构：从原理、设计到项目实战</text>
+        </view>
+      </view>
+      <view class="cu-list menu-avatar">
+        <view class="padding bg-white">
+          <view class="text-left padding">
+            《Serverless架构：从原理、设计到项目实战》面向有兴趣使用或者正在使用Serverless架构部署相关应用与服务的技术人员，通过对Serverless基础的介绍、对相关规范和标准的描述，对架构、应用的讲解与阐述，为读者提供相对客观和完整的学习资料及文档资料
+            ......
+          </view>
+          <view class="grid col-5 padding-sm">
+            <button class="cu-btn round bg-gradual-orange" bindtap="toJingdong" data-sid="12592747">跳转京东购买</button>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="cu-card case">
+    <view class="cu-item shadow">
+      <view class="image">
+        <image
+          src="https://serverless-article-picture.oss-cn-hangzhou.aliyuncs.com/1631805629795_20210916152030707030.png"
+          mode="widthFix"></image>
+        <view class="cu-tag bg-blue">电子书</view>
+        <view class="cu-bar bg-shadeBottom">
+          <text class="text-cut">人人都能学会的 Serverless 实践</text>
+        </view>
+      </view>
+      <view class="cu-list menu-avatar">
+        <view class="padding bg-white">
+          <view class="text-left padding">
+            本系列从Serverless的概念介绍出发，重点讲述了Serverless在监控告警、人工智能、大数据等众多领域的实际应用。没有“高大上的宏伟蓝图”，都是人人可上手的实际案例，希望读者看完之后，都可以自己完成一些Serverless小应用或者将自己的项目Serverless化
+            ......
+          </view>
+          <view class="grid col-5 padding-sm">
+            <button class="cu-btn round bg-gradual-orange" bindtap="toBro"
+              data-url="https://www.infoq.cn/minibook/MakiAbJdrZdT48UzHBfp">点击复制链接</button>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+<text>\n\n\n\n\n\n</text>
+<!-- 头部自定义Nav -->
+<view class="cu-bar tabbar bg-white shadow foot">
+  <view class="action {{cur_nav == 'index' ? 'text-orange' : ''}}" bindtap="NavChange" data-cur="index">
+    <view class="cuIcon-home"></view> 博客首页
+  </view>
+  <view class="action {{cur_nav == 'category' ? 'text-orange' : ''}}" bindtap="NavChange" data-cur="category">
+    <view class="cuIcon-tag"></view> 分类标签
+  </view>
+  <view class="action {{cur_nav == 'representative' ? 'text-orange' : ''}}" bindtap="NavChange"
+    data-cur="representative">
+    <view class="cuIcon-edit"></view> 代表作品
+  </view>
+  <view class="action {{cur_nav == 'about' ? 'text-orange' : ''}}" bindtap="NavChange" data-cur="about">
+    <view class="cuIcon-people"></view> 关于博主
+  </view>
+</view>
