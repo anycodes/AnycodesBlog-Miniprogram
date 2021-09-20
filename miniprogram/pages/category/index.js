@@ -35,7 +35,7 @@ Page({
 
   onLoad: function (options) {
     const that = this
-    app.doPost(`tags`, {}, option = {
+    app.doPost(`tags`, {}, {
       method: "GET"
     }).then(function (result) {
       wx.hideLoading()

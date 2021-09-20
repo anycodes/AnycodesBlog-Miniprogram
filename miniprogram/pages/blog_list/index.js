@@ -21,7 +21,7 @@ Page({
       optionName: options.name
     })
     const that = this
-    app.doPost(`blog/list/${options.type}`, {'name': options.name}, option = {
+    app.doPost(`blog/list/${options.type}`, {'name': options.name}, {
       method: "POST"
     }).then(function (result) {
       wx.hideLoading()
